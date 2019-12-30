@@ -1,18 +1,9 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: Previous Menus
+permalink: /previous/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+[2019](https://2019.schwabley.com)
+[2018](https://2018.schwabley.com)
+[2017](https://2017.schwabley.com)
