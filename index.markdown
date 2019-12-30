@@ -17,5 +17,6 @@ layout: page
     {% endif %}
     <p><small>Contains:</small></p>
 </div>
+<hr>
 {% endif %}
 {% endfor %}
