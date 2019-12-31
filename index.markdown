@@ -5,18 +5,26 @@
 layout: page
 ---
 
-{% for course in site.data.courses offset:6 %}
-{% if course.What %}
-<div class="dish">
-    <h4 class="text-muted">{{ course.Course }}</h4>
-    <h2>{{ course.What }}</h2>
-    <h3 class="text-muted">by {{ course.Who }}</h3>
-    <p>{{ course.Recipe }}</p>
-    {% if course.Pairing %}
-    <p>Served with: {{ course.Pairing }}</p>
+<h2 class="post-list-heading">The Menu</h2>
+<ul class="post-list">
+    {% for course in site.data.courses offset:6 %}
+    {% if course.What %}
+    <li>
+        <span class="post-meta">{{ course.Course }}</span>
+        {% if course.Link %}
+        <h3><a href="{{- course.Link -}}">{{- course.What -}}</a></h3>
+        {% else %}
+        <h3>{{ course.What }}</h3>
+        {% endif %}
+        <span class="post-meta">by {{ course.Who }}</span>
+        <p>{{ course.Description }}</p>
+        {% if course.Pairing %}
+        <p>Served with: {{ course.Pairing }}</p>
+        {% endif %}
+        {% if course.Allergens %}
+        <p><small>Contains: {{ course.Allergens }}</small></p>
+        {% endif %}
+    </li>
     {% endif %}
-    <p><small>Contains:</small></p>
-</div>
-<hr>
-{% endif %}
-{% endfor %}
+    {% endfor %}
+</ul>
