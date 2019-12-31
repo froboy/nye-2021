@@ -1,0 +1,24 @@
+name: Update Menu
+
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+
+jobs:
+  wget:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: wget
+        uses: wei/wget@v1.1.1
+        with:
+         args: --no-check-certificate -O _data/courses.csv 'https://docs.google.com/spreadsheets/d/1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw/export?gid=134493818&format=csv'
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Add changes" -a
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
