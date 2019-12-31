@@ -1,8 +1,9 @@
-name: Update Menu
+name: Update Courses
 
 on:
   schedule:
     - cron: '*/15 * * * *'
+  push:
 
 jobs:
   wget:
@@ -14,6 +15,7 @@ jobs:
         with:
          args: --no-check-certificate -O _data/courses.csv 'https://docs.google.com/spreadsheets/d/1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw/export?gid=134493818&format=csv'
       - name: Commit files
+        if: git diff --exit-code
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
