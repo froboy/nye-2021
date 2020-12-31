@@ -1,4 +1,4 @@
-Number,Courses,Who,What,Recipe,Pairing,What will you need us to provide to serve and eat it,Supplies Packed
+Number,Course,Who,What,Recipe,Pairing,What will you need us to provide to serve and eat it,Supplies Packed
 , ,,,,,,
 ,"If your course is already taken, just add a row and write in your dish. **",,,,,,
 ,"For drink pairing, you do not need to provide a full glass of wine, 2-3 bottles should be plenty.***",,,,,,
@@ -8,9 +8,9 @@ Number,Courses,Who,What,Recipe,Pairing,What will you need us to provide to serve
 ,,,,,,,
 1,Amuse Bouche,Laura,Duck Bacon Crackers,https://www.thecookierookie.com/bacon-wrapped-crackers/,,,yes
 2,Cheese,TnT,Mini cheese platter,,Diners' choice,,
-3,Appetizer 2 (Platter),Sam and Jonathan,thai vegetarian dumplings and green beans,"https://www.carrotsandflowers.com/best-damn-vegan-dumplings-recipe/, https://www.ambitiouskitchen.com/thai-green-beans/",lager,,yes
-4,Appetizer 1 (Platter),Carolyn and Dan,cacio e pepe cheese puffs,,mulled wine,The cheese puffs will need a small takeout container (I'm thinking like a short version of a Chinese takeout rice container). The mulled wine will need cups that seal (it will be room temp.),yes
-5,Appetizer 3 (Platter),"Schwabley, Laura",7 Layer Salmon Dip,https://www.bonappetit.com/recipe/smoked-salmon-7-layer-dip,Assyrtiko,,yes
+3,Appetizer 1,Sam and Jonathan,thai vegetarian dumplings and green beans,"https://www.carrotsandflowers.com/best-damn-vegan-dumplings-recipe/, https://www.ambitiouskitchen.com/thai-green-beans/",lager,,yes
+4,Appetizer 2,Carolyn and Dan,cacio e pepe cheese puffs,,mulled wine,The cheese puffs will need a small takeout container (I'm thinking like a short version of a Chinese takeout rice container). The mulled wine will need cups that seal (it will be room temp.),yes
+5,Appetizer 3,"Schwabley, Laura",7 Layer Salmon Dip,https://www.bonappetit.com/recipe/smoked-salmon-7-layer-dip,Assyrtiko,,yes
 6,Soup,Avi,Beet soup with beet greens,http://deborahmadison.com/beating-the-heat-with-beets/,Mulberry gimlet,,yes
 7,Pasta/rice,Cole and Morgen,Beans and Rice,,,,
 8,Palate Cleanser,Tom/Melissa,Some citrus gelee,,prosecco,,they handling
