@@ -1,25 +1,33 @@
-# name: Update Courses
+# This is a basic workflow that is manually triggered
 
-# on:
-#   schedule:
-#     - cron: '*/15 * * * *'
-#   push:
+name: Manual workflow
 
-# jobs:
-#   wget:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@master
-#       - name: wget
-#         uses: wei/wget@v1.1.1
-#         with:
-#          args: --no-check-certificate -O _data/courses.csv 'https://docs.google.com/spreadsheets/d/1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw/export?gid=134493818&format=csv'
-#       - name: Commit files
-#         run: |
-#           git config --local user.email "action@github.com"
-#           git config --local user.name "GitHub Action"
-#           git commit -m "Add changes" -a
-#       - name: Push changes
-#         uses: ad-m/github-push-action@master
-#         with:
-#           github_token: ${{ secrets.GITHUB_TOKEN }}
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on: [workflow_dispatch]
+
+# Checkout the gh-pages branch.
+# Use wget to get the CSV export of the Google Sheet,
+# from the path I got from https://stackoverflow.com/a/44184071.
+# Commit files only if there's a change (via https://stackoverflow.com/a/8123841
+# Push changes
+jobs:
+  wget:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: curl
+        uses: wei/curl@v1.1.1
+        with:
+         args: -Lo _data/menu.csv 'https://docs.google.com/spreadsheets/d/1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw/export?format=csv&id=1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw&gid=876353126'
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add -A
+          git diff-index --quiet HEAD || git commit -m 'Updated menu via automation.'
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
