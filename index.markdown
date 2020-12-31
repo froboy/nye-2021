@@ -7,10 +7,10 @@ layout: page
 
 <h2 class="post-list-heading">The Menu</h2>
 <ul class="post-list">
-    {% for course in site.data.courses offset:6 %}
+    {% for course in site.data.courses offset:9 %}
     {% if course.What %}
     <li>
-        <span class="post-meta">{{ course.Course }}</span>
+        <span class="post-meta">{{ course.Number }}: {{ course.Course }}</span>
         {% if course.Link %}
         <h3><a href="{{- course.Link -}}">{{- course.What -}}</a></h3>
         {% else %}
