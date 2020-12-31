@@ -19,7 +19,7 @@ jobs:
       - name: curl
         uses: wei/curl@v1.1.1
         with:
-         args: -Lo _data/menu.csv 'https://docs.google.com/spreadsheets/d/1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw/export?format=csv&id=1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw&gid=876353126'
+         args: -Lo _data/courses.csv 'https://docs.google.com/spreadsheets/d/1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw/export?format=csv&id=1LS21DH30sWI97CiWZdb0LiGvGbQE7iSjWO4RYfdsXKw&gid=876353126'
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
