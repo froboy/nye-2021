@@ -5,6 +5,8 @@
 layout: page
 ---
 
+<p>Our December 31, 2020 party was held in traditional 2020 fashion—virtually. <a href="https://photos.app.goo.gl/ejqt2hTH6RxftwBi9">Check out the pics.</a></p>
+
 <h2 class="post-list-heading">The Menu</h2>
 <ul class="post-list">
     {% for course in site.data.courses offset:7 %}
